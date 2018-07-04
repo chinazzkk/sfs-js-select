@@ -1,0 +1,166 @@
+.sfs-select{
+    opacity: 0;
+    display: none;
+}
+.sfs-select-default__normal{
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.sfs-select-default__active{
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.sfs-select-default__normal .sfs-select-default-text{
+    color: #000;
+    border-bottom:1px solid #000;
+    padding:.5rem 0.2rem;
+}
+
+.sfs-select-default__active .sfs-select-default-text{
+    color: #000;
+    border-bottom:2px solid #4f0df2;
+    padding:.5rem 1rem;
+    z-index: 999;
+}
+
+.sfs-select-default__normal .sfs-select-div{
+    display: none;
+}
+
+.sfs-select-default__active .sfs-select-div{
+    display: block;
+}
+.sfs-select-default__active .sfs-select-default-text:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 1rem;
+    top: calc(50% - .6rem);
+    border: .5rem solid transparent ;
+    border-bottom-color:#4f0df2 ;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    transition: transform .2s ease-in-out,right .2s ease-in-out,-webkit-transform .2s ease-in-out;
+}
+
+.sfs-select-default__normal .sfs-select-default-text:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0;
+    top: calc(50% + .0625rem);
+    border: .5rem solid transparent ;
+    border-top-color:#DEDEDE ;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    transition: transform .2s ease-in-out,right .2s ease-in-out,-webkit-transform .2s ease-in-out;
+}
+
+.sfs-select-default{
+    position: relative;
+    display: inline-block;
+    text-align: left!important;
+    clear: both;
+    box-sizing: border-box;
+    background: transparent;
+    border: 0;
+    width: 100%;
+    padding: 0;
+    outline:none;
+    cursor: pointer;
+}
+
+.sfs-select-default:focus{
+    outline: none;
+}
+
+.sfs-select-default-text{
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    width: 100%;
+    font-weight: 400;
+    transition: all linear .2s;
+}
+
+.sfs-select-div{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 998;
+    outline:none;
+}
+
+.sfs-select-ul{
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    outline:none;
+    max-height: 15rem;
+    overflow-y: scroll;
+    background: #FFF;
+}
+
+
+.sfs-select-div:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: -3rem;
+    background: transparent;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.16), 0 0 6px 0 rgba(0,0,0,.08);
+}
+
+.sfs-select-default ul li{
+    width: 100%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+    transition: background-color ease-out .2s;
+}
+
+
+.sfs-select-default .selected{
+    background: #FFF;
+}
+
+.sfs-select-default ul li:hover{
+    color: #666;
+    width: 100%;
+    height: 100%;
+    background: #7a0cf2;
+}
+
+.sfs-select-default ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    color: #333;
+}
